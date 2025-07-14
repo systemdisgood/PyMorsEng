@@ -45,18 +45,18 @@ if __name__ == "__main__":
                         #print(infile_byte_int)
                         if infile_byte_int in ASCIIINTMORSE.keys():
                             #print(infile_byte_int)
-                            if infile_byte_int == 10 or infile_int_byte == 32:
+                            if infile_byte_int == 10 or infile_byte_int == 32:
                                 if infile_byte_int == 10:
                                     need_enter = True
                                 if infile_byte_int == 32:
                                     need_space = True
                             else:
                                 if need_enter:
-need_enter = False
-need_space = False
+                                    need_enter = False
+                                    need_space = False
                                 elif need_space:
-					need_enter = False
-									need_space = False
+                                    need_enter = False
+                                    need_space = False
                 else:
                     break
             outfile.setnchannels(1)
