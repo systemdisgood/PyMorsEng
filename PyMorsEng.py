@@ -3,6 +3,15 @@ import sys
 import math
 import wave
 
+def sine_do_step(phase, phase_step):
+	phase+=phase_step
+	if phase >= (2*math.pi):
+		phase = phase - (2*math.pi)
+
+def generate_unit(samples_quantity):
+	pass
+
+
 if __name__ == "__main__":
     ASCIIINTMORSE = {
         32:"0000000",
@@ -43,29 +52,11 @@ if __name__ == "__main__":
                                     need_space = True
                             else:
                                 if need_enter:
-                                    for unit in ASCIIINTMORSE[10]:
-                                        
-                                        phase = PHASE_STEP < math.pi
-                                        if phase >= (2*math.pi):
-                                            phase = phase - (2*math.pi)
-                                    need_enter = False
-                                    need_space = False
+need_enter = False
+need_space = False
                                 elif need_space:
-                                    for unit in ASCIIINTMORSE[32]:
-
-                                        phase = PHASE_STEP < math.pi                                                                                                               if phase >= (2*math.pi):
-                                            phase = phase - (2*math.pi)
-                                    need_enter = False
-                                    need_space = False
-                                for unit in ASCIIINTMORSE[infile_byte_int]:
-                                    if unit == '1':
-
-
-
-                                    phase = PHASE_STEP < math.pi
-                                    if phase >= (2*math.pi):
-                                        phase = phase - (2*math.pi)
-                                    pass
+					need_enter = False
+									need_space = False
                 else:
                     break
             outfile.setnchannels(1)
